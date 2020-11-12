@@ -1,6 +1,6 @@
 <div class="container">
     <h1>New dose</h1>
-    <%= simple_form_for @dose do |f| %>
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
         <%= f.association :ingredient, label: "Ingredient" %>
         <%= f.input :description, label: "Description" %>
         <%= f.submit %>
