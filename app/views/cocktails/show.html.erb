@@ -1,12 +1,22 @@
-<h1><%= @cocktail.name %></h1>
-<ul>
-  <% @cocktail.doses.each do |dose| %>
-    <li><%= dose.ingredient.name %>, <%= dose.description %></li>
-  <% end %>
-</ul>
 
-<%= link_to "Add to the recipe", new_cocktail_dose_path(@cocktail) %>
-<%#= link_to "Remove a dosage", cocktail_dose(@dose) %>
-
-<%= link_to "Back to Menu", cocktails_path %>
+<div class="container py-10">
+  <div class="row">
+    <div class="col">
+      <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" class="w-100 ">
+    </div>
+    <div class="col">
+      <h1><%= @cocktail.name %></h1>
+      <ul>
+        <% @cocktail.doses.each do |dose| %>
+          <li><%= dose.ingredient.name %>: <%= dose.description %></li>
+        <% end %>
+      </ul>
+      <%= link_to "Add to the recipe", new_cocktail_dose_path(@cocktail) %>
+      <%#= link_to "Remove a dosage", cocktail_dose(@dose) %>
+    </div>
+  </div>
+  <div class="text-center">
+    <%= link_to "Back to Menu", cocktails_path %>
+  </div>
+</div>
 
