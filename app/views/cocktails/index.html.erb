@@ -1,18 +1,18 @@
 <div class="banner-main" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.2)), url(https://images.pexels.com/photos/1283219/pexels-photo-1283219.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);">
-  <div class="container text-center">
-    <h1>The Gin Palace</h1>
+  <div class="container">
+    <h1>The Dive Bar</h1>
     <p>Drink with sophistication</p>
   </div>
 </div>
 
-<div class="text-center">
-<h1>Finest Cocktails</h1>
-</div>
 
 <div class="container">
+  <div class="text-center mt-5">
+  <h1>Your Finest Cocktails</h1>
+  </div>
   <div class="row d-flex justify-content-around">
     <% @cocktails.each do |cocktail|%>
-      <div class="col-3 cocktail-card card-img-top text-center border my-5 mx-3" style="width: 18rem;">
+      <div class="col-3 cocktail-card card-img-top text-center border p-1 my-5 mx-3" style="width: 18rem;">
       <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="...">
         <div class="card-body">
           <h5 class="card-title"><%= link_to cocktail.name, cocktail_path(cocktail)  %></h5>
@@ -24,5 +24,14 @@
   </div>
 </div>
 
-
+<div class="text-center">
 <%= link_to "Add a new cocktail!", new_cocktail_path  %>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-light navbar-bottom">
+  <i class="fas fa-glass-martini-alt"></i>
+  <a class="navbar-brand ml-2">Your Dive Bar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
