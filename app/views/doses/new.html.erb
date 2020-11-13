@@ -1,8 +1,33 @@
+
+
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <i class="fas fa-glass-martini-alt"></i>
+  <a class="navbar-brand ml-2">Your Dive Bar</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+</nav>
+
+
 <div class="container">
-    <h1>New dose</h1>
+  <div class="row m-10">
+    <div class="col">
+       <%= cl_image_tag(@cocktail.photo.key, class: "card-img-top w-100") %>
+    </div>
+    <div class="col">
+    <h1>New Ingredient</h1>
     <%= simple_form_for [@cocktail, @dose] do |f| %>
         <%= f.association :ingredient, label: "Ingredient" %>
         <%= f.input :description, label: "Description" %>
         <%= f.submit %>
     <% end %>
+</div>
+  <br>
+  <div class="">
+    <%= link_to "Back to Menu", cocktails_path %>
+  </div>
+    </div>
+  </div>
+  
 </div>
