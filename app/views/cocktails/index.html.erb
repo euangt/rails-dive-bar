@@ -9,10 +9,13 @@
 <div class="container">
   <div class="text-center mt-5">
   <h1>Your Finest Cocktails</h1>
+<div class="a-buttons text-center">
+<%= link_to "Add a new cocktail!", new_cocktail_path  %>
+</div>
   </div>
   <div class="row d-flex justify-content-around">
     <% @cocktails.each do |cocktail|%>
-      <div class="col-3 cocktail-card card-img-top text-center border p-1 my-5 mx-3" style="width: 18rem;">
+      <div class="col-3 cocktail-card card-img-top text-center border p-1 my-5 mx-3 shadow-sm" style="width: 18rem;">
       <% if cocktail.photo.attached?  %>
        <%= cl_image_tag(cocktail.photo.key, class: "card-img-top") %>
        <% else %>
@@ -27,9 +30,6 @@
   </div>
 </div>
 
-<div class="text-center">
-<%= link_to "Add a new cocktail!", new_cocktail_path  %>
-</div>
 
 <nav class="navbar navbar-expand-lg navbar-light navbar-bottom">
   <i class="fas fa-glass-martini-alt"></i>
