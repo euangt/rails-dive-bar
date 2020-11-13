@@ -13,8 +13,8 @@ class CocktailsController < ApplicationController
 
   def create
     @cocktail = Cocktail.new(cocktail_params)
-    if (@cocktail.save)
-      redirect_to @cocktail, notice: "Success"
+    if @cocktail.save
+      redirect_to @cocktail
     else
       render :new
     end
@@ -23,6 +23,6 @@ end
   private
 
   def cocktail_params
-    params.require(:cocktail).permit(:name, :cocktail_id)
+    params.require(:cocktail).permit(:name, :cocktail_id, :photo)
   end
 end

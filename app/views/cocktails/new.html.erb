@@ -3,6 +3,7 @@
   <%= simple_form_for (@cocktail) do |f| %>
     <div class="form inputs">
       <%= f.input :name %>
+      <%= f.input :photo, as: :file %>
       <%#= f.input :doses %>
       <%#= f.association :ingredients, as: :check_boxes %>
     </div>
