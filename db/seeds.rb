@@ -9,9 +9,6 @@ ingredients = JSON.parse(list_serialized)
 list = ingredients["drinks"]
 sleep 1 
 puts "Creating drinks..."
-Cocktail.create(name: 'Whiskey Sour')
-Cocktail.create(name: 'Long Island')
-Cocktail.create(name: 'Old Fashioned')
 list.each do |ingredient|
   zutat = Ingredient.create(name: ingredient["strIngredient1"])
 end
