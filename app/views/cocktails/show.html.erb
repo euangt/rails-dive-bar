@@ -18,10 +18,14 @@
           <li><%= dose.ingredient.name %>: <%= dose.description %></li>
         <% end %>
       </ul>
-      <%= link_to "Add to the recipe", new_cocktail_dose_path(@cocktail) %>
+      <%# class="add-button" %>
+      <div>
+        <%= link_to "Add to the recipe", new_cocktail_dose_path(@cocktail) %>
+      </div>
       <%#= link_to "Remove a dosage", cocktail_dose(@dose) %>
     </div>
   </div>
+  <%# class="back-button" %>
   <div class="text-center">
     <%= link_to "Back to Menu", root_path %>
   </div>

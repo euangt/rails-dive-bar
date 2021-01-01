@@ -19,11 +19,13 @@
           <%= f.input :name %>
           <%= f.input :photo, as: :file %>
         </div>
+        <%# class="add-button" %>
         <div class="form-actions">
           <%= f.button :submit, class: "btn btn-secondary" %>
         </div>
       <% end %>
       <br>
+      <%# class="back-button" %>
       <div class="a-buttons">
         <%= link_to "Back to Menu", root_path %>
       </div>
