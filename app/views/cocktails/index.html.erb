@@ -15,7 +15,7 @@
   </div>
   <div class="row d-flex justify-content-around">
     <% @cocktails.each do |cocktail|%>
-      <div class="col-3 cocktail-card card-img-top text-center border p-1 my-5 mx-3 shadow-sm" style="width: 18rem;">
+      <div class="col-3 card-img-top text-center border p-1 my-5 mx-3 shadow-sm" style="width: 18rem;">
       <% if cocktail.photo.attached?  %>
        <%= cl_image_tag(cocktail.photo.key, class: "card-img-top") %>
        <% else %>
