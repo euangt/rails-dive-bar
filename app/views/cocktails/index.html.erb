@@ -7,24 +7,35 @@
 
 
 <div class="container">
-  <div class="text-center mt-5">
+  <%# class="headline" %>
+  <div class="text-center mt-5 "> 
     <h1>Your Finest Cocktails</h1>
+    <%# class="add-button" %>
     <div class="a-buttons text-center">
       <%= link_to "Add a new cocktail!", new_cocktail_path  %>
     </div>
   </div>
+  <%# class="cocktail-list" %>
   <div class="row d-flex justify-content-around">
     <% @cocktails.each do |cocktail|%>
+      <%# class="cocktail-card" %>
       <div class="col-3 card-img-top text-center border p-1 my-5 mx-3 shadow-sm" style="width: 18rem;">
         <% if cocktail.photo.attached?  %>
-          <%= cl_image_tag(cocktail.photo.key, class: "card-img-top") %>
+          <%# class="cocktail-image" %>
+          <div>
+            <%= cl_image_tag(cocktail.photo.key, class: "card-img-top") %>
+          </div>
         <% else %>
-          <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="...">
+          <%# class="cocktail-image" %>
+          <div >
+            <img src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80" class="card-img-top" alt="...">
+          </div>
         <% end %>
-        <div class="card-body">
-          <h5 class="card-title"><%= link_to cocktail.name, cocktail_path(cocktail)  %></h5>
+        <div class="cocktail-card-body">
+          <%# class="cocktail-text" %>
+          <h5 class="cocktail-card-title"><%= link_to cocktail.name, cocktail_path(cocktail)  %></h5>
         </div>
-      </div> 
+      </div>
     <% end %>
   </div>
 </div>
