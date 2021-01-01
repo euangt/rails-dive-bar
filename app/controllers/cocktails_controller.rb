@@ -13,9 +13,13 @@ class CocktailsController < ApplicationController
 
   def create
     @cocktail = Cocktail.new(cocktail_params)
-    if @cocktail.save
-      redirect_to @cocktail
-    else
+    if @cocktail.photo.attached?
+      if @cocktail.save
+        redirect_to @cocktail
+      else
+        render :new
+      end
+    else 
       render :new
     end
 end
