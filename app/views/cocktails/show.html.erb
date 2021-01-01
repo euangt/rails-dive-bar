@@ -19,7 +19,7 @@
         <% end %>
       </ul>
       <%= link_to "Add to the recipe", new_cocktail_dose_path(@cocktail) %>
-      <%#= link_to "Remove a dosage", cocktail_dose(@dose) %>
+      <%= link_to "Remove Cocktail", cocktail_path(@cocktail), method: :delete %>
     </div>
   </div>
   <div class="text-center">
