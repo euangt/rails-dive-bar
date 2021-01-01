@@ -1,6 +1,42 @@
+.cocktail-list {
+  flex-grow: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+  padding: 12px;
+}
+
 .cocktail-card {
+  flex-grow: 1;
+  box-shadow: 0 0 16px rgba(0, 0, 0, 0.2);
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+  color: white;
+  position: relative;
+  width: 100%;
+
+  .cocktail-image {
+
+  }
+  
+  .cocktail-card-body {
+    
+  }
+
+  a:hover{
+    background: #f4f4f4 !important;
+  }
 }
 
 .button-menu {
   text-decoration: none;
+}
+
+.new-cocktail {
+
+}
+
+.headline {
+
 }
