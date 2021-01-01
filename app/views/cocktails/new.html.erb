@@ -17,7 +17,7 @@
       <%= simple_form_for (@cocktail) do |f| %>
         <div class="form inputs">
           <%= f.input :name %>
-          <%= f.input :photo, as: :file, error: "Please add an image" %>
+          <%= f.input :photo, as: :file, error: "Please add an image", required: true %>
         </div>
         <%# class="add-button" %>
         <div class="form-actions">

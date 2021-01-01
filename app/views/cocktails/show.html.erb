@@ -18,11 +18,16 @@
           <li><%= dose.ingredient.name %>: <%= dose.description %></li>
         <% end %>
       </ul>
+<<<<<<< HEAD
       <%# class="add-button" %>
       <div>
         <%= link_to "Add to the recipe", new_cocktail_dose_path(@cocktail) %>
       </div>
       <%#= link_to "Remove a dosage", cocktail_dose(@dose) %>
+=======
+      <%= link_to "Add to the recipe", new_cocktail_dose_path(@cocktail) %>
+      <%= link_to "Remove Cocktail", cocktail_path(@cocktail), method: :delete %>
+>>>>>>> master
     </div>
   </div>
   <%# class="back-button" %>
