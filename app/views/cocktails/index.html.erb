@@ -25,7 +25,9 @@
         <% end %>
         <div class="cocktail-card-body">
           <h3 class="cocktail-card-title"><%= link_to cocktail.name, cocktail_path(cocktail)  %></h5>
-          <p class="cocktail-card-text"><%=  %><p>
+          <% cocktail.ingredients.each do |ingredient| %>
+            <p class="cocktail-card-text"><%= ingredient.name %><p>
+          <% end %>
         </div>
       </div>
     <% end %>
