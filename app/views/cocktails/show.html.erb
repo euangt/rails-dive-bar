@@ -18,22 +18,24 @@
       <% end %>
     </div>
     <div class="col">
-      <h1><%= @cocktail.name %></h1>
-      <ul>
-        <% @cocktail.doses.each do |dose| %>
-          <li><%= dose.ingredient.name %>: <%= dose.description %></li>
-        <% end %>
-      </ul>
-      <%# class="add-button" %>
       <div>
-        <%= link_to "Add to the recipe", new_cocktail_dose_path(@cocktail) %>
+        <h1><%= @cocktail.name %><h1>
+        <h3>Recipe:</h1>
+        <ul>
+          <% @cocktail.doses.each do |dose| %>
+            <li><%= dose.ingredient.name %>: <%= dose.description %></li>
+          <% end %>
+        </ul>
+      </div>
+
+      <hr>
+      <div class="links">
+        <%= link_to "Add to the recipe", new_cocktail_dose_path(@cocktail) %><br>
         <%= link_to "Remove Cocktail", cocktail_path(@cocktail), method: :delete %>
+        <%= link_to "Back to Menu", root_path %>
       </div>
     </div>
   </div>
   <%# class="back-button" %>
-  <div class="text-center">
-    <%= link_to "Back to Menu", root_path %>
-  </div>
 </div>
 

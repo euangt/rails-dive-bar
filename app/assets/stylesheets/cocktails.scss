@@ -1,3 +1,16 @@
 // Place all the styles related to the cocktails controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+.links {
+  position: absolute;
+  bottom: 0;
+  font-size: 16px;
+
+  a {
+    text-decoration: none;
+    color: #374045;
+    background-color: #374045t;
+  }
+}
+
