@@ -27,15 +27,13 @@
           <% end %>
         </ul>
       </div>
-
       <hr>
       <div class="links">
         <%= link_to "Add to the recipe", new_cocktail_dose_path(@cocktail) %><br>
-        <%= link_to "Remove Cocktail", cocktail_path(@cocktail), method: :delete %>
+        <%= link_to "Remove Cocktail", cocktail_path(@cocktail), method: :delete %> <br>
         <%= link_to "Back to Menu", root_path %>
       </div>
     </div>
   </div>
-  <%# class="back-button" %>
 </div>
 

@@ -19,14 +19,12 @@
           <%= f.input :name %>
           <%= f.input :photo, as: :file, error: "Please add an image", required: true %>
         </div>
-        <%# class="add-button" %>
-        <div class="form-actions">
-          <%= f.button :submit, class: "btn btn-secondary" %>
+        <div>
+          <%= f.button :submit%>
         </div>
       <% end %>
       <br>
-      <%# class="back-button" %>
-      <div class="a-buttons">
+      <div class="links">
         <%= link_to "Back to Menu", root_path %>
       </div>
     </div>
