@@ -10,21 +10,20 @@
 <div class="container">
   <div class="row m-10">
     <div class="col">
-       <%= cl_image_tag(@cocktail.photo.key, class: "card-img-top w-100") %>
+      <%= cl_image_tag(@cocktail.photo.key, class: "card-img-top w-100") %>
     </div>
     <div class="col">
-    <h1>New Ingredient</h1>
-    <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <h1>New Ingredient</h1>
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
         <%= f.association :ingredient, label: "Ingredient" %>
         <%= f.input :description, label: "Description" %>
         <%= f.submit %>
-    <% end %>
-</div>
-  <br>
-  <%# class="back-button" %>
-  <div class="">
-    <%= link_to "Back to Menu", root_path %>
-  </div>
+      <% end %>
+    </div>
+      <br>
+      <div class="links">
+        <%= link_to "Back to Menu", root_path %>
+      </div>
     </div>
   </div>
 </div>
