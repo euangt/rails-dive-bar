@@ -15,8 +15,7 @@
       <%= link_to "Add a new cocktail!", new_cocktail_path  %>
     </div>
   </div>
-  <%# class="cocktail-list" %>
-  <div class="row d-flex justify-content-around">
+  <div class="cocktail-list">
     <% @cocktails.each do |cocktail|%>
       <div class="cocktail-card">
         <% if cocktail.photo.attached?  %>
@@ -26,7 +25,7 @@
         <% end %>
         <div class="cocktail-card-body">
           <h3 class="cocktail-card-title"><%= link_to cocktail.name, cocktail_path(cocktail)  %></h5>
-          <p class="cocktail-card-text"><p>
+          <p class="cocktail-card-text"><%=  %><p>
         </div>
       </div>
     <% end %>
