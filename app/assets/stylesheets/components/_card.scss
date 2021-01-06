@@ -6,11 +6,11 @@
   padding: 12px;
 }
 
-.headline {
-  text-align: center;
-  margin-top: 5px;
-  font-size: 4px;
-}
+// .headline {
+//   text-align: center;
+//   margin-top: 5px;
+//   font-size: 4px;
+// }
 
 body {
   background-color: #f0f0f0;
@@ -67,6 +67,8 @@ section {
   transition: .4s;
   font-weight: 600;
   letter-spacing: 2px;
+  color: 374045!important ;
+  text-decoration: none!important; 
 }
 
 .cocktail-card-text {
