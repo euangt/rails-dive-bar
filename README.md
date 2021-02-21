@@ -1,24 +1,7 @@
-# README
+# The Dive Bar
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Rails-based Cocktail creation app. Built on a PostgreSQL db with an HTML, CSS and JS-powered frontend. 
 
-Things you may want to cover:
+Full app can be found at https://egt-mister-cocktail.herokuapp.com/
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Drink Responsibly
